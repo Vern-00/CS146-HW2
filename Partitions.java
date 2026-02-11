@@ -1,6 +1,17 @@
 public class Partitions {
 
     public static int lomutoPartition(int[] array, int low, int high) {
+        // check for invalid input (null array, empty array, or bad bounds)
+        if (array == null) {
+            throw new IllegalArgumentException("array cannot be null");
+        }
+        if (array.length == 0) {
+            throw new IllegalArgumentException("array cannot be empty");
+        }
+        if (low < 0 || high < 0 || low > high || high >= array.length) {
+            throw new IllegalArgumentException("invalid low/high bounds");
+        }
+
         // choose the last element as the pivot
         int pivot = array[high];
 
@@ -30,6 +41,17 @@ public class Partitions {
     }
 
     public static int hoarePartition(int[] array, int low, int high) {
+        // check for invalid input (null array, empty array, or bad bounds)
+        if (array == null) {
+            throw new IllegalArgumentException("array cannot be null");
+        }
+        if (array.length == 0) {
+            throw new IllegalArgumentException("array cannot be empty");
+        }
+        if (low < 0 || high < 0 || low > high || high >= array.length) {
+            throw new IllegalArgumentException("invalid low/high bounds");
+        }
+
         // choose the first element as the pivot
         int pivot = array[low];
 

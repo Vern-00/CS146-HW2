@@ -22,6 +22,7 @@ public class UnitTests {
     void lomutoEmptyArrayTest() {
         int[] array = {};
 
+        // with input checks added, empty arrays should throw IllegalArgumentException
         assertThrows(IllegalArgumentException.class, () -> {
             Partitions.lomutoPartition(array, 0, -1);
         });
@@ -59,6 +60,7 @@ public class UnitTests {
     void hoareEmptyArrayTest() {
         int[] array = {};
 
+        // with input checks added, empty arrays should throw IllegalArgumentException
         assertThrows(IllegalArgumentException.class, () -> {
             Partitions.hoarePartition(array, 0, -1);
         });
